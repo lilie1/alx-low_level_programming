@@ -1,37 +1,17 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * print_times_table - prints the times table with a given parameter
- * @n: parameter for times table
- *
- * Return: returns nothing
+ * print_to_98 - Prints all natural numbers from input to 98,
+ *               in order separated by a comma followed by a space.
+ * @n: The number to begin counting at.
  */
-void print_times_table(int n)
+void print_to_98(int n)
 {
-int i, j, k;
-
-if (n < 0 || n > 15)
-return;
-for (i = 0; i <= n; i++)
-{
-for (j = 0; j <= n; j++)
-{
-k = j * i;
-if (j != 0)
-{
-_putchar(',');
-_putchar(' ');
-if (k < 100)
-_putchar(' ');
-if (k < 10)
-_putchar(' ');
-}
-if (k >= 100)
-_putchar((k / 100) + '0');
-if (k >= 10)
-_putchar(((k / 10) % 10) + '0');
-_putchar((k % 10) + '0');
-}
-_putchar('\n');
-}
-}
+	if (n <= 98)
+		for (n = n; n <= 97; n++)
+			printf("%d, ", n);
+	else
+		for (n = n; n > 98; n--)
+			printf("%d, ", n);
+	printf("98\n");
+}}
