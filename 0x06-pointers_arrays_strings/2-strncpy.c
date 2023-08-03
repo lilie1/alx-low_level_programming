@@ -20,3 +20,4 @@ dest[y] = src[y];
 for (y = src_len; y < n; y++)
 dest[y] = '\0';
 return (dest);
+}
